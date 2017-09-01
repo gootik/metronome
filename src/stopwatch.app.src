@@ -1,0 +1,19 @@
+{application, stopwatch,
+ [{description, "An Erlang library for easily timing parts of your code"},
+  {vsn, "0.0.1"},
+  {registered, []},
+  {applications,
+   [kernel,
+    stdlib
+   ]},
+  {env,[
+   {callback_handler, stopwatch_default_callback}
+  ]},
+  {modules, [stopwatch]},
+
+  {maintainers, ["Sasan Hezarkhani"]},
+  {licenses, ["MIT"]},
+  {links, [
+
+  ]}
+ ]}.
