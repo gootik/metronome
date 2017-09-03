@@ -13,5 +13,5 @@
 
   {maintainers, ["Sasan Hezarkhani"]},
   {licenses, ["MIT"]},
-  {links, [{"Github", "https://github.com/gootik/stopwatch"}]},
+  {links, [{"Github", "https://github.com/gootik/stopwatch"}]}
  ]}.
