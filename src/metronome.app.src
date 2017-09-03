@@ -1,4 +1,4 @@
-{application, stopwatch,
+{application, metronome,
  [{description, "An Erlang library for easily timing parts of your code"},
   {vsn, "0.0.1"},
   {registered, []},
@@ -6,12 +6,10 @@
    [kernel,
     stdlib
    ]},
-  {env,[
-   {callback_handler, stopwatch_default_callback}
-  ]},
+  {env,[]},
   {modules, []},
 
   {maintainers, ["Sasan Hezarkhani"]},
   {licenses, ["MIT"]},
-  {links, [{"Github", "https://github.com/gootik/stopwatch"}]}
+  {links, [{"Github", "https://github.com/gootik/metronome"}]}
  ]}.

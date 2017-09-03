@@ -1,4 +1,4 @@
-stopwatch
+Metronome
 =====
 
 A simple library to add instrumentation to your Erlang code. This is a more
@@ -9,7 +9,7 @@ predefined module with the results. For example, if you compile your code with
 `{d, 'stopwatch_callback_mod', 'sample_callback'}` and run the following:
 
 ```erlang
--include_lib("stopwatch/include/stopwatch.hrl").
+-include_lib("metronome/include/metronome.hrl").
 
 ?timed(total_sum,
   begin
@@ -49,7 +49,7 @@ _ = First + Second,
 1. Add the package to your rebar.config
    ```erlang
    {deps, [
-      {stopwatch, "0.1.0"}
+      {metronome, "0.1.0"}
    ]}.
    ```
 
@@ -63,9 +63,9 @@ _ = First + Second,
 3. [Optional] Configure a custom callback module by using overrides:
    ```erlang
    {overrides, [
-     {override, stopwatch, [
+     {override, metronome, [
        {erl_opts, [
-         {d, 'stopwatch_callback_mod', 'my_sample_mod'
+         {d, 'metronome_callback_mod', 'my_sample_mod'
        }]
      }]}
    ]}.
@@ -80,7 +80,7 @@ _ = First + Second,
    or use the included macro:
 
    ```erlang
-   -include_lib("stopwatch/stopwatch.hrl").
+   -include_lib("metronome/include/metronome.hrl").
 
    ?timed(some_name,
      --- Intensive amount of work ---
@@ -93,13 +93,13 @@ to make things really easy to report timing of different parts of my code.
 
 ### Custom callback
 If you want a customized callback versus the provided one, you have to create a
-module that implements the `stopwatch_callback` behavior. An example using `statsderl`
+module that implements the `metronome_callback` behavior. An example using `statsderl`
 would look like this:
 
 ```erlang
--module(stopwatch_statsderl).
+-module(metronome_statsderl).
 
--behavior(stopwatch_callback).
+metronome_callback).
 
 -export([
   tick/2

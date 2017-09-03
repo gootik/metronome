@@ -3,13 +3,13 @@
 %%%      error_logger.
 %%% @end
 %%%-------------------------------------------------------------------
--module(stopwatch_default_callback).
+-module(metronome_default_callback).
 
--behavior(stopwatch_callback).
+-behavior(metronome_callback).
 
 -export([
     tick/2
 ]).
 
 tick(Name, Timing) ->
-    error_logger:info_msg("[Default Stopwatch Callback] - ~p took ~pms", [Name, Timing/1000]).
+    error_logger:info_msg("[Default Metronome Callback] - ~p took ~pms", [Name, Timing/1000]).
