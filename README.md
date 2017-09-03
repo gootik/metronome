@@ -99,7 +99,7 @@ would look like this:
 ```erlang
 -module(metronome_statsderl).
 
-metronome_callback).
+-behavior(metronome_callback).
 
 -export([
   tick/2
