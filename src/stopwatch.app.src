@@ -9,11 +9,9 @@
   {env,[
    {callback_handler, stopwatch_default_callback}
   ]},
-  {modules, [stopwatch]},
+  {modules, []},
 
   {maintainers, ["Sasan Hezarkhani"]},
   {licenses, ["MIT"]},
-  {links, [
-
-  ]}
+  {links, [{"Github", "https://github.com/gootik/stopwatch"}]},
  ]}.
