@@ -4,7 +4,7 @@ Metronome [![Hex.pm](https://img.shields.io/hexpm/v/metronome.svg)](https://hex.
 A simple library to add instrumentation to your Erlang code. This is a more
 dynamic way of doing `timer:tc/3` or even a lazier version of it.
 
-Stopwatch will measure runtime of parts of your code and calls a method on your
+Metronome will measure runtime of parts of your code and calls a method on your
 predefined module with the results. For example, if you compile your code with
 `{d, 'metronome_callback_mod', 'sample_callback'}` and run the following:
 
@@ -56,7 +56,7 @@ _ = First + Second,
 2. Add the parse transform to your rebar.config
    ```erlang
    {erl_opts, [
-     {parse_transform, stopwatch_transform}
+     {parse_transform, metronome_transform}
    ]}.
    ```
 
