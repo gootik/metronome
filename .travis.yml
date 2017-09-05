@@ -11,6 +11,6 @@ otp_release:
   - 19.3
   - 20.0
 
-script: "./rebar3 eunit"
+script: "./rebar3 as test eunit"
 
 sudo: false
