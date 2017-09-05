@@ -3,7 +3,7 @@
 %%%
 %%% @end
 %%%-------------------------------------------------------------------
--module(stopwatch_transform).
+-module(metronome_transform).
 
 -export([
     parse_transform/2
@@ -38,7 +38,7 @@ do_transform({tuple, L, [{atom, L, stopwatch_stop}]} = _Form) ->
        [TimeDiff, {atom, L, native}, {atom, L, microsecond}]},
 
     {call, L,
-     {remote, L, {atom, L, ?stopwatch_callback_mod}, {atom, L, tick}},
+     {remote, L, {atom, L, ?metronome_callback_mod}, {atom, L, tick}},
      [{atom, L, SwName}, Microseconds]};
 
 do_transform(Form) ->

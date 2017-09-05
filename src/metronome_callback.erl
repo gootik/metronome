@@ -3,8 +3,8 @@
 %%%
 %%% @end
 %%%-------------------------------------------------------------------
--module(stopwatch_callback).
+-module(metronome_callback).
 
 -include("types.hrl").
 
--callback tick(Name :: atom(), Timing :: stopwatch_timing()) -> ok.
+-callback tick(Name :: atom(), Timing :: metronome_timing()) -> ok.

@@ -1,0 +1,10 @@
+{application,metronome,
+             [{description,"An Erlang library for easily timing parts of your code"},
+              {vsn,"0.0.2"},
+              {registered,[]},
+              {applications,[kernel,stdlib]},
+              {env,[]},
+              {modules,[]},
+              {maintainers,["Sasan Hezarkhani"]},
+              {licenses,["MIT"]},
+              {links,[{"Github","https://github.com/gootik/metronome"}]}]}.

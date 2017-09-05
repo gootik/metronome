@@ -1,11 +1,11 @@
--module(stopwatch_test).
+-module(metronome_test).
 
--compile([{parse_transform, stopwatch_transform}]).
+-compile([{parse_transform, metronome_transform}]).
 
 -include_lib("eunit/include/eunit.hrl").
--include("stopwatch.hrl").
+-include("metronome.hrl").
 
--behavior(stopwatch_callback).
+-behavior(metronome_callback).
 
 -export([
     tick/2
@@ -20,7 +20,6 @@ manual_test() ->
     check_callback(manual_test).
 
 simple_test() ->
-    application:set_env(stopwatch, callback_handler, ?MODULE),
     ?timed(?FUNCTION_NAME,
            begin
                Sample = lists:sum(lists:seq(0, 100))
@@ -31,7 +30,6 @@ simple_test() ->
     check_callback(?FUNCTION_NAME).
 
 multi_test() ->
-    application:set_env(stopwatch, callback_handler, ?MODULE),
     ?timed(first,
            begin
                Sample = lists:sum(lists:seq(0, 100))
@@ -49,7 +47,6 @@ multi_test() ->
     check_callback(second).
 
 nested_test() ->
-    application:set_env(stopwatch, callback_handler, ?MODULE),
     ?timed(nested_first,
            begin
                Sample = lists:sum(lists:seq(0, 100)),

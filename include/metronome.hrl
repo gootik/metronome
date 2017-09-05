@@ -1,6 +1,6 @@
--define(timed(StopwatchName, Code),
+-define(timed(TimerName, Code),
     begin
-        {stopwatch_start, StopwatchName},
+        {stopwatch_start, TimerName},
         Result = Code,
         {stopwatch_stop},
 
